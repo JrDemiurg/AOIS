@@ -13,6 +13,10 @@ class TestMatrix(unittest.TestCase):
         self.matrix.set_word(9, self.word9)
         self.assertEqual(self.word9, self.matrix.get_word(9))
 
+    def test_get_address(self):
+        self.matrix.set_address_column(9, self.word9)
+        self.assertEqual(self.word9, self.matrix.get_address_column(9))
+
     def test_word_apply_logical_operations_to_each_bit(self):
         self.matrix.set_word(2, self.word2)
         self.matrix.set_word(3, self.word3)
